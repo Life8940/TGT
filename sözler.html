@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Search</title>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button id="searchButton">Search</button>
+    </div>
+    <div id="resultsContainer">
+        <!-- search results -->
+    </div>
+</body>
+</html>
+
+<style>
+    /* Basic styling for the search bar and results container */
+.search-container {
+    text-align: center;
+    margin: 20px;
+}
+
+#searchInput {
+    padding: 8px;
+    width: 60%;
+}
+
+#searchButton {
+    padding: 8px 16px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#resultsContainer {
+    margin: 20px;
+}
+
+</style>
+
+<script>
+    // Get DOM elements
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.getElementById("searchButton");
+const resultsContainer = document.getElementById("resultsContainer");
+
+// Define a sample dataset for demonstration
+const sampleData = [
+    "Vatan",
+    "Millet",
+    "Devlet",
+    "Türk",
+    "Türkçülük",
+    "Kemalizm"
+];
+
+// Function to perform search
+function performSearch(query) {
+    const filteredResults = sampleData.filter(item => item.toLowerCase().includes(query.toLowerCase()));
+    displayResults(filteredResults);
+}
+
+// Function to display search results
+function displayResults(results) {
+    resultsContainer.innerHTML = "";
+    if (results.length === 0) {
+        resultsContainer.innerHTML = "No results found.";
+        return;
+    }
+
+    const resultList = document.createElement("ul");
+    results.forEach(result => {
+        const listItem = document.createElement("li");
+        listItem.textContent = result;
+        resultList.appendChild(listItem);
+    });
+
+    resultsContainer.appendChild(resultList);
+}
+
+// Event listener for search button click
+searchButton.addEventListener("click", () => {
+    const query = searchInput.value;
+    performSearch(query);
+});
+
+</script>

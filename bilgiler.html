@@ -1,0 +1,84 @@
+<ul id="myMenu">
+  <b><li><a href="#">Konu Başlıkları:</a></li></b>
+  <b><li><a href="#">Türk kimdir?</a></li></b>
+  <b><li><a href="#">Neden Türkçülük?</a></li></b>
+  <b><li><a href="#">Tarihte Türkler</a></li></b>
+  <b><li><a href="#">Türk Devletleri</a></li></b>
+  <b><li><a href="#">Turan</a></li></b>
+  <b><li><a href="#">Türkçülük ve Milliyetçilik</a></li></b>
+  <b><li><a href="#">Türkiye</a></li></b>
+  <b><li><a href="#">Geçmişten Bugüne</a></li></b>
+</ul>
+
+<h3>TÜRK KİMDİR?</h3>
+<h4>Dünya üzerinde yaşayan insan topluluklarının milletleşme süreci onların avcı-toplayıcılıktan çiftçi-çobanlığa geçmesi ile başlar. Türkleri oluşturacak insan topluluklarının MÖ 6000'lerde koyun yetiştiriciliğine başladığı düşünülmektedir.Bu tarih atlı göçebe Türk kültürünün başlangıcı olarak kabul edilebilir. Bu değişiklikler ile Anav kültürü ortaya çıkmıştır.
+
+  Türklerin atalarının MÖ 2500 ile MÖ 1700 yılları arasındaki Afanasiyevo kültürü ile başlayan ve MÖ 1700 ile MÖ 1200 yılları arasındaki Andronovo kültürü ile devam eden dolikosefal mongolitlerle ortak yönleri bulunmayan Brakisefal ırka dayandığını savunurlar. Bu ırkın savaşçı ve göçebe kültüre sahip olduğu, MÖ 1700 yılları sonrasında kitleler hâlinde Altay Dağları ile Tanrı Dağları arasındaki bölgeye yayıldığı bilinmektedir.
+  
+  Botai kültürünü Türklerle ilişkilendiren kaynaklara göre, süvari tekniğini bulan, yani modern anlamda at binen ilk kavim Türklerdir. Çinliler de ata binmeyi MÖ 3. yüzyılda Hunlardan öğrenmişlerdir.
+</h4>
+<h3>NEDEN TÜRKÇÜLÜK?</h3>
+<h4>
+  
+</h4>
+
+<style>
+h4{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+h3{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+    /* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddddddaf;
+}
+
+/* Style the navigation menu */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: azure;
+}
+
+/* Style the navigation links */
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+
+<script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("mySearch");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myMenu");
+      li = ul.getElementsByTagName("li");
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+</script>
